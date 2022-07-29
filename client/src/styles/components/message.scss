@@ -1,0 +1,18 @@
+.message {
+  background-color: $color-white;
+  // background-color: inherit;
+  padding: 3rem;
+  max-width: fit-content;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-weight: $font-light-weight;
+  
+  &:not(:last-child){
+    margin-bottom: 1rem;
+  }
+  &:last-child {
+    border-radius: 0rem 3rem 3rem 3rem;
+
+  }
+}

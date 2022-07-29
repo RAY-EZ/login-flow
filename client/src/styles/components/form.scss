@@ -1,0 +1,89 @@
+.form {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    & label {
+      margin-left: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    & input {
+      padding: 1rem;
+      border-style:solid;
+      font-size: 1.12rem;
+      border-width: 0.12rem;
+      border-radius: 4rem;
+      border-color: $color-black;
+      outline: none;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+
+      &:focus {
+        border-color: $color-brown;
+      }
+    }
+
+    & input:focus ~ .form__input__error {
+      display: none;
+    }
+
+    & input[focused="true"] ~ .form__input__error{
+      display: block;
+    }
+
+  }
+  &__input__error{
+    // text-align: center;
+    margin-left: 1rem;
+    color: $color-brown;
+    font-size: 1rem;
+  }
+
+  &__submit {
+    width: max-content;
+    align-self: center;
+    padding: 1rem 4rem;
+    color: $color-white;
+    background-color: $color-brown;
+    border: none;
+  }
+
+}
+
+.preferences {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin-bottom: 1rem;
+      
+    }
+  }
+  &__item div{
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 1rem;
+    outline: 0.1rem solid $color-black;
+    // clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+
+  }
+  & input {
+    border: 0;
+    width: 300%;
+    height: 300%;
+    padding: 0;
+    transform: translate(-40%, -40%);
+  }
+}

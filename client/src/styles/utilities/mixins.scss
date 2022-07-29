@@ -1,0 +1,13 @@
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%cover {
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+}

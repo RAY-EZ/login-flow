@@ -1,0 +1,61 @@
+.chat {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(239.26deg, $color-off-blue 63.17%, $color-off-brown 94.92%);
+  &__header{
+    height: 5rem;
+    flex: 1;
+  }
+  &__area {
+    height: 90vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
+  &__messages{
+    display: flex;
+    height: 100%;
+    width: 30rem;
+    // overflow-y: scroll;
+    flex-direction: column;
+    // scrollbar-width: none;
+  }
+
+  &__header{
+    background-color: inherit;
+    // background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__setting{
+    position: relative;
+
+    &__menu {
+      background-color: $color-white;
+      padding: 2rem 1rem;
+      border-radius: 3rem;
+      position: absolute;
+      width: 15rem;
+    }
+  }
+
+  &__setting__button {
+    @extend %center;
+    background-color: $color-white;
+    height: 3rem;
+    width: 3rem; 
+  }
+
+}
+
+.setting__icon{
+  width: 100%;
+  height: 100%;
+}
+
